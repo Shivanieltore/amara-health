@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amara Health — Backend & Database Plan</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #1e293b;
+      background: #fff;
+      padding: 48px;
+      max-width: 860px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .header {
+      border-bottom: 3px solid #2563eb;
+      padding-bottom: 20px;
+      margin-bottom: 36px;
+    }
+    .header h1 { font-size: 28px; font-weight: 800; color: #0f172a; }
+    .header p  { font-size: 14px; color: #64748b; margin-top: 6px; }
+    .badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 14px;
+      margin-top: 36px;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 8px;
+      margin-top: 20px;
+    }
+    p { font-size: 14px; color: #475569; margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 14px; color: #475569; margin-bottom: 5px; }
+    .section {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .section-blue {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .section-dark {
+      background: #0f172a;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .section-dark h3 { color: #60a5fa; }
+    .section-dark p, .section-dark li { color: #94a3b8; }
+    code {
+      background: #1e293b;
+      color: #7dd3fc;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    pre {
+      background: #0f172a;
+      color: #94a3b8;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      line-height: 1.8;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    pre .keyword { color: #7dd3fc; }
+    pre .string  { color: #86efac; }
+    pre .comment { color: #64748b; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .card-title { font-size: 13px; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
+    .card-desc  { font-size: 12px; color: #64748b; }
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+    .tag-green  { background: #dcfce7; color: #16a34a; }
+    .tag-blue   { background: #dbeafe; color: #1d4ed8; }
+    .tag-amber  { background: #fef3c7; color: #d97706; }
+    .recommended {
+      border: 2px solid #2563eb;
+      border-radius: 12px;
+      padding: 20px;
+      background: #eff6ff;
+      margin-bottom: 16px;
+    }
+    .recommended-title {
+      font-size: 15px; font-weight: 800; color: #1e40af; margin-bottom: 4px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 32px 0;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 20px;
+      margin-top: 40px;
+    }
+    @media print {
+      body { padding: 32px; }
+      .section-dark { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="badge">Technical Documentation</div>
+    <h1>Amara Health — Backend & Database Plan</h1>
+    <p>Data storage strategy, database schema, and technology recommendations — June 2026</p>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="badge">Section 1</div>
+  <h2>User Data Collected from the Website</h2>
+
+  <h3>From "Get Started / Book a Demo" Forms</h3>
+  <div class="section">
+    <ul>
+      <li><strong>Full Name</strong> — Doctor's full name (required)</li>
+      <li><strong>Medical Email</strong> — Work/clinic email address (required)</li>
+      <li><strong>Clinic / Hospital Name</strong> — Practice or institution name (required)</li>
+      <li><strong>Specialty</strong> — e.g. Cardiology, Endocrinology (required)</li>
+      <li><strong>Role</strong> — Physician, Nurse Practitioner, Hospital Admin, IT Lead, Other</li>
+      <li><strong>Product Interest</strong> — Amara Lite / DocDash / Both / Undecided</li>
+      <li><strong>Pathway of Interest</strong> — Amara Lite / DocDash Layer / Not Sure Yet</li>
+      <li><strong>Clinical Context / Requests</strong> — Free-text notes (optional)</li>
+    </ul>
+  </div>
+
+  <h3>From the Interactive Platform Demo Modal</h3>
+  <div class="section">
+    <ul>
+      <li><strong>Full Name</strong> — Doctor's name</li>
+      <li><strong>Medical Email</strong> — Clinic email</li>
+      <li><strong>Clinic / Hospital Name</strong></li>
+      <li><strong>Specialty</strong></li>
+      <li><strong>Role</strong> — Dropdown selection</li>
+      <li><strong>Pathway of Interest</strong> — Toggle button selection</li>
+      <li><strong>Clinical Context</strong> — Optional textarea</li>
+    </ul>
+  </div>
+
+  <h3>Session & Behavioural Tracking Data</h3>
+  <div class="section">
+    <ul>
+      <li><strong>Source</strong> — Which form submitted (demo_modal, get_started)</li>
+      <li><strong>Pathway viewed</strong> — Amara Lite or DocDash tab active</li>
+      <li><strong>Patient demo viewed</strong> — Which patient was selected</li>
+      <li><strong>Tab section active</strong> — Health Trends, Medicines, Reports, HL7</li>
+      <li><strong>Submission timestamp</strong> — UTC datetime</li>
+      <li><strong>IP address / Country</strong> — For compliance and fraud prevention</li>
+    </ul>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Section 2 -->
+  <div class="badge">Section 2</div>
+  <h2>Recommended Database</h2>
+
+  <div class="recommended">
+    <div class="tag tag-green">Recommended</div>
+    <div class="recommended-title">PostgreSQL via Supabase</div>
+    <p style="font-size:13px; color:#1e40af; margin-bottom:8px;">Best fit for this structured lead capture use case</p>
+    <ul>
+      <li>Structured relational data fits perfectly — all form fields are fixed columns</li>
+      <li>Supabase gives a REST API + authentication out of the box — no backend server needed initially</li>
+      <li>Free tier supports up to 500MB storage and 2GB data transfer per month</li>
+      <li>Built-in Row Level Security (RLS) for HIPAA-grade access control</li>
+      <li>Easy to extend with additional tables (appointments, patients, analytics)</li>
+    </ul>
+  </div>
+
+  <h3>Alternative Options</h3>
+  <div class="grid-2">
+    <div class="card">
+      <div class="tag tag-blue">Alternative</div>
+      <div class="card-title">Firebase Firestore</div>
+      <div class="card-desc">NoSQL document store. Good if form fields may vary per user type. Faster initial setup. Google Cloud ecosystem.</div>
+    </div>
+    <div class="card">
+      <div class="tag tag-amber">Alternative</div>
+      <div class="card-title">MongoDB Atlas</div>
+      <div class="card-desc">Flexible schema if clinical notes or requirements expand significantly. Good for unstructured data alongside structured fields.</div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Section 3 -->
+  <div class="badge">Section 3</div>
+  <h2>Database Schema (PostgreSQL)</h2>
+
+  <div class="section-dark">
+    <h3>leads table</h3>
+    <pre>
+CREATE TABLE leads (
+  id            UUID         PRIMARY KEY DEFAULT gen_random_uuid(),
+  name          TEXT         NOT NULL,
+  email         TEXT         NOT NULL,
+  clinic        TEXT,
+  specialty     TEXT,
+  role          TEXT,
+  pathway       TEXT,        -- 'lite' | 'docdash' | 'both' | 'unsure'
+  notes         TEXT,
+  source        TEXT,        -- 'demo_modal' | 'get_started'
+  ip_address    INET,
+  created_at    TIMESTAMPTZ  DEFAULT NOW()
+);</pre>
+    <h3 style="margin-top:20px;">demo_interactions table (optional analytics)</h3>
+    <pre>
+CREATE TABLE demo_interactions (
+  id             UUID         PRIMARY KEY DEFAULT gen_random_uuid(),
+  session_id     TEXT,
+  pathway_viewed TEXT,        -- 'lite' | 'dash'
+  patient_id     TEXT,        -- 'pat-1' | 'pat-2' | 'pat-3'
+  tab_active     TEXT,        -- 'health' | 'meds' | 'reports'
+  created_at     TIMESTAMPTZ  DEFAULT NOW()
+);</pre>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Section 4 -->
+  <div class="badge">Section 4</div>
+  <h2>Recommended Tech Stack</h2>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="tag tag-blue">Frontend</div>
+      <div class="card-title">React + Vite (current)</div>
+      <div class="card-desc">Already built. Submit forms via fetch() to Supabase REST API or a Node.js backend endpoint.</div>
+    </div>
+    <div class="card">
+      <div class="tag tag-green">Database</div>
+      <div class="card-title">Supabase (PostgreSQL)</div>
+      <div class="card-desc">Hosted PostgreSQL with auto-generated REST API, dashboard, and auth. No server required initially.</div>
+    </div>
+    <div class="card">
+      <div class="tag tag-blue">Backend (optional)</div>
+      <div class="card-title">Node.js + Express</div>
+      <div class="card-desc">If you need server-side validation, email sending (nodemailer), or HIPAA logging before inserting to DB.</div>
+    </div>
+    <div class="card">
+      <div class="tag tag-amber">Email Notifications</div>
+      <div class="card-title">Resend / SendGrid</div>
+      <div class="card-desc">Trigger a confirmation email to the clinician and an internal alert to your team on each lead submission.</div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Section 5 -->
+  <div class="badge">Section 5</div>
+  <h2>HIPAA Compliance Notes</h2>
+
+  <div class="section-blue">
+    <p>Since Amara Health handles clinical contact data, keep these in mind:</p>
+    <ul>
+      <li><strong>Do not store patient health data</strong> on the marketing website database — only lead/contact info</li>
+      <li><strong>Enable Row Level Security (RLS)</strong> in Supabase so only authenticated admins can read lead data</li>
+      <li><strong>Use HTTPS everywhere</strong> — Supabase enforces TLS by default</li>
+      <li><strong>Sign a BAA</strong> with Supabase before storing any PHI — Supabase supports BAA on paid plans</li>
+      <li><strong>IP addresses</strong> should be stored only if disclosed in your privacy policy</li>
+      <li><strong>Audit logs</strong> — Supabase provides built-in audit logging on Pro plan</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    Amara Health Technology · Backend Planning Document · June 2026 · Confidential
+  </div>
+
+</body>
+</html>

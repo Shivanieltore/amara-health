@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls 'C:\\\\Users\\\\eltor\\\\Downloads\\\\amara-health---clinical-solutions\\\\src')",
+      "Read(//c/Users/eltor/Downloads/amara-health---clinical-solutions/src/**)",
+      "Bash(ls 'C:\\\\Users\\\\eltor\\\\Downloads\\\\amara-health---clinical-solutions\\\\assets')",
+      "Read(//c/Users/eltor/Downloads/amara-health---clinical-solutions/assets/**)"
+    ]
+  }
+}
