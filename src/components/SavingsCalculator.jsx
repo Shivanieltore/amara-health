@@ -47,7 +47,7 @@ export default function SavingsCalculator() {
       <LayoutContainer>
 
         {/* Two-column layout */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '64px', alignItems: 'center' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16 items-center">
 
           {/* LEFT COLUMN */}
           <div>
@@ -134,7 +134,7 @@ export default function SavingsCalculator() {
             </div>
 
             {/* Results */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>
+            <div className="grid grid-cols-3 gap-3">
               <div className="bg-slate-50 border border-slate-200 rounded-xl" style={{ padding: '16px', textAlign: 'center' }}>
                 <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#94a3b8', display: 'block' }}>Weekly Time Saved</span>
                 <span style={{ fontSize: '28px', fontWeight: 800, color: '#0f172a', display: 'block', marginTop: '4px' }}>{weeklyHrs} hrs</span>

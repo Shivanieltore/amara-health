@@ -93,7 +93,7 @@ export default function App() {
               style={{ padding: '44px' }}
             >
               {/* Top section */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '32px', marginBottom: '32px' }}>
+              <div className="flex flex-col lg:flex-row justify-between items-start gap-8" style={{ marginBottom: '32px' }}>
                 <div style={{ maxWidth: '520px' }}>
                   <div className="inline-flex items-center gap-1.5 text-blue-600 text-[11px] uppercase tracking-widest mb-3" style={{ background: '#eff6ff', padding: '5px 12px', borderRadius: '999px', fontWeight: 800 }}>
                     <Stethoscope className="w-3.5 h-3.5 shrink-0" />
@@ -119,7 +119,7 @@ export default function App() {
               <div style={{ borderTop: '1px solid #f1f5f9', marginBottom: '36px' }} />
 
               {/* Bottom section */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '32px', alignItems: 'start' }}>
+              <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-start">
                 {activeDeployment === 'lite' ? (
                   <>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

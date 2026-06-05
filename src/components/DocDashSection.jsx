@@ -11,7 +11,7 @@ export default function DocDashSection() {
       <LayoutContainer>
 
         {/* ── TOP: Two-column header ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 0.7fr', gap: '80px', alignItems: 'flex-start', marginBottom: '72px' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-10 lg:gap-20 items-start" style={{ marginBottom: '72px' }}>
 
           {/* Left: label + heading + description */}
           <div>
@@ -73,7 +73,7 @@ export default function DocDashSection() {
           </div>
 
           {/* Three columns */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 
             {/* Col 1: Data Sources */}
             <div style={{ background: '#111827', borderRadius: '12px', border: '1px solid rgba(71,85,105,0.4)', padding: '24px' }}>
@@ -155,7 +155,7 @@ export default function DocDashSection() {
         </div>
 
         {/* ── Bottom three feature cards ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { title: 'Engineered for IT Alignment',  desc: 'Designed to integrate seamlessly without disrupting active hospital administration pipelines, DocDash is deployed through containerized modules requiring minimal administrative friction.' },
             { title: 'Read-Only Safety Guarantee',   desc: 'DocDash does not request database write credentials or database mutation queries. Every transmission is structured as a safe, read-only transaction on approved replication views.' },

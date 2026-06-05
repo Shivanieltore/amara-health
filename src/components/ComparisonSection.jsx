@@ -31,7 +31,8 @@ export default function ComparisonSection() {
         </div>
 
         {/* Table card */}
-        <div className="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden" style={{ marginBottom: '32px' }}>
+        <div className="overflow-x-auto" style={{ marginBottom: '32px' }}>
+        <div className="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden" style={{ minWidth: '600px' }}>
 
           {/* Header row */}
           <div className="bg-white border-b border-slate-200" style={{ display: 'grid', gridTemplateColumns: COL, padding: '24px 32px' }}>
@@ -79,9 +80,10 @@ export default function ComparisonSection() {
             </div>
           ))}
         </div>
+        </div>
 
         {/* Bottom banner */}
-        <div className="bg-white rounded-2xl shadow-sm" style={{ padding: '24px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '24px', border: '1.5px solid #1e293b' }}>
+        <div className="bg-white rounded-2xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6" style={{ padding: '24px 32px', border: '1.5px solid #1e293b' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <div style={{ background: '#eff6ff', borderRadius: '12px', padding: '12px', flexShrink: 0 }}>
               <Settings style={{ width: '20px', height: '20px', color: '#2563eb' }} />

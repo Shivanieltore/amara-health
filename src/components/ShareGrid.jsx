@@ -80,7 +80,7 @@ export default function ShareGrid() {
             style={{
               maxWidth:   '950px',
               margin:     '0 auto',
-              fontSize:   'clamp(64px, 5vw, 80px)',
+              fontSize:   'clamp(32px, 5vw, 64px)',
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.02em',
@@ -112,7 +112,7 @@ export default function ShareGrid() {
               justifyContent: 'center',
               alignItems:     'center',
               gap:            '24px',
-              flexWrap:       'nowrap',
+              flexWrap:       'wrap',
             }}
           >
             {TABS.map(t => {

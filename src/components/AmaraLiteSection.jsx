@@ -38,7 +38,7 @@ export default function AmaraLiteSection() {
       <LayoutContainer>
 
         {/* Section heading — two-column */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '64px', alignItems: 'center', marginBottom: '64px' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 items-center" style={{ marginBottom: '64px' }}>
 
           {/* Left: text — left-aligned, no centering */}
           <div style={{ width: '100%' }}>
