@@ -276,7 +276,7 @@ export default function PlatformDemo() {
       </div>
 
       {/* ── Main card ── */}
-      <div className="border border-slate-200 shadow-xl overflow-hidden bg-slate-50 flex flex-col" style={{ borderRadius: '16px', maxHeight: '620px' }}>
+      <div className="border border-slate-200 shadow-xl overflow-hidden bg-slate-50 flex flex-col lg:max-h-[620px]" style={{ borderRadius: '16px' }}>
 
         {/* Top bar */}
         <div className={`border-b flex flex-col md:flex-row md:items-center justify-between gap-3 shrink-0 transition-colors ${isDash ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`} style={{ padding: '12px 20px' }}>
@@ -323,8 +323,8 @@ export default function PlatformDemo() {
         <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 min-h-0">
 
           {/* LEFT SIDEBAR */}
-          <div className="lg:col-span-3 border-r border-slate-200 bg-white flex flex-col justify-between h-full" style={{ padding: '16px' }}>
-            <div className="flex flex-col gap-4 min-h-0 overflow-y-auto">
+          <div className="lg:col-span-3 border-b lg:border-b-0 lg:border-r border-slate-200 bg-white flex flex-col justify-between" style={{ padding: '16px' }}>
+            <div className="flex flex-col gap-4">
 
               {/* Patient card */}
               <div className="bg-slate-50 rounded-xl border border-slate-100" style={{ padding: '12px' }}>
