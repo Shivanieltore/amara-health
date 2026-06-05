@@ -92,8 +92,8 @@ export default function DocDashSection() {
                   { label: 'Laboratory Information Systems (LIS)', badge: 'HL7 / FHIR',  badgeBg: '#1e3a8a', badgeColor: '#93c5fd' },
                   { label: 'Imaging Repositories (PACS)',          badge: 'DICOM Metadata', badgeBg: '#1e293b', badgeColor: '#94a3b8' },
                 ].map((r, i) => (
-                  <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#0a0f1e', borderRadius: '8px', border: '1px solid #1e293b', padding: '10px 12px', gap: '8px' }}>
-                    <span style={{ fontSize: '12px', color: '#cbd5e1' }}>{r.label}</span>
+                  <div key={i} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', background: '#0a0f1e', borderRadius: '8px', border: '1px solid #1e293b', padding: '10px 12px', gap: '6px' }}>
+                    <span style={{ fontSize: '12px', color: '#cbd5e1', flex: '1 1 auto', minWidth: 0 }}>{r.label}</span>
                     <span style={{ fontSize: '9px', fontWeight: 700, background: r.badgeBg, color: r.badgeColor, padding: '2px 8px', borderRadius: '4px', whiteSpace: 'nowrap', flexShrink: 0, fontFamily: 'monospace' }}>{r.badge}</span>
                   </div>
                 ))}

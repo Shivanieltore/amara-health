@@ -134,21 +134,21 @@ export default function SavingsCalculator() {
             </div>
 
             {/* Results */}
-            <div className="grid grid-cols-3 gap-3">
-              <div className="bg-slate-50 border border-slate-200 rounded-xl" style={{ padding: '16px', textAlign: 'center' }}>
-                <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#94a3b8', display: 'block' }}>Weekly Time Saved</span>
-                <span style={{ fontSize: '28px', fontWeight: 800, color: '#0f172a', display: 'block', marginTop: '4px' }}>{weeklyHrs} hrs</span>
-                <span style={{ fontSize: '11px', color: '#3b82f6', display: 'block', marginTop: '4px' }}>Back to direct medicine</span>
+            <div className="grid grid-cols-3 gap-2">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl" style={{ padding: '12px 8px', textAlign: 'center' }}>
+                <span style={{ fontSize: '9px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#94a3b8', display: 'block' }}>Weekly Saved</span>
+                <span style={{ fontSize: '22px', fontWeight: 800, color: '#0f172a', display: 'block', marginTop: '4px', lineHeight: 1.1 }}>{weeklyHrs}<br /><span style={{ fontSize: '14px' }}>hrs</span></span>
+                <span style={{ fontSize: '10px', color: '#3b82f6', display: 'block', marginTop: '4px' }}>Direct medicine</span>
               </div>
-              <div className="bg-slate-50 border border-slate-200 rounded-xl" style={{ padding: '16px', textAlign: 'center' }}>
-                <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#94a3b8', display: 'block' }}>Monthly Reclaimed</span>
-                <span style={{ fontSize: '28px', fontWeight: 800, color: '#0f172a', display: 'block', marginTop: '4px' }}>{monthlyHrs} hrs</span>
-                <span style={{ fontSize: '11px', color: '#3b82f6', display: 'block', marginTop: '4px' }}>Reduction in screentime</span>
+              <div className="bg-slate-50 border border-slate-200 rounded-xl" style={{ padding: '12px 8px', textAlign: 'center' }}>
+                <span style={{ fontSize: '9px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#94a3b8', display: 'block' }}>Monthly</span>
+                <span style={{ fontSize: '22px', fontWeight: 800, color: '#0f172a', display: 'block', marginTop: '4px', lineHeight: 1.1 }}>{monthlyHrs}<br /><span style={{ fontSize: '14px' }}>hrs</span></span>
+                <span style={{ fontSize: '10px', color: '#3b82f6', display: 'block', marginTop: '4px' }}>Less screentime</span>
               </div>
-              <div className="rounded-xl" style={{ padding: '16px', textAlign: 'center', background: '#0f172a' }}>
-                <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#94a3b8', display: 'block' }}>Annual Equivalent</span>
-                <span style={{ fontSize: '28px', fontWeight: 800, color: '#60a5fa', display: 'block', marginTop: '4px' }}>{annualDays} days</span>
-                <span style={{ fontSize: '11px', color: '#94a3b8', display: 'block', marginTop: '4px' }}>Gained per clinic year</span>
+              <div className="rounded-xl" style={{ padding: '12px 8px', textAlign: 'center', background: '#0f172a' }}>
+                <span style={{ fontSize: '9px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#94a3b8', display: 'block' }}>Annual</span>
+                <span style={{ fontSize: '22px', fontWeight: 800, color: '#60a5fa', display: 'block', marginTop: '4px', lineHeight: 1.1 }}>{annualDays}<br /><span style={{ fontSize: '14px' }}>days</span></span>
+                <span style={{ fontSize: '10px', color: '#94a3b8', display: 'block', marginTop: '4px' }}>Per clinic year</span>
               </div>
             </div>
 

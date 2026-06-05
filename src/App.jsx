@@ -107,11 +107,11 @@ export default function App() {
                   </p>
                 </div>
                 {/* Tab switcher */}
-                <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '14px', padding: '4px', display: 'flex', gap: '4px', flexShrink: 0 }}>
-                  <button type="button" onClick={() => setActiveDeployment('lite')} style={{ background: activeDeployment === 'lite' ? 'white' : 'transparent', border: activeDeployment === 'lite' ? '1px solid #e2e8f0' : 'none', borderRadius: '10px', padding: '10px 20px', fontSize: '13px', fontWeight: 700, color: activeDeployment === 'lite' ? '#3b82f6' : '#94a3b8', boxShadow: activeDeployment === 'lite' ? '0 2px 8px rgba(0,0,0,0.08)' : 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+                <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '14px', padding: '4px', display: 'flex', gap: '4px', width: '100%' }}>
+                  <button type="button" onClick={() => setActiveDeployment('lite')} style={{ flex: 1, background: activeDeployment === 'lite' ? 'white' : 'transparent', border: activeDeployment === 'lite' ? '1px solid #e2e8f0' : 'none', borderRadius: '10px', padding: '10px 12px', fontSize: '13px', fontWeight: 700, color: activeDeployment === 'lite' ? '#3b82f6' : '#94a3b8', boxShadow: activeDeployment === 'lite' ? '0 2px 8px rgba(0,0,0,0.08)' : 'none', cursor: 'pointer' }}>
                     Amara Lite (Standalone)
                   </button>
-                  <button type="button" onClick={() => setActiveDeployment('enterprise')} style={{ background: activeDeployment === 'enterprise' ? 'white' : 'transparent', border: activeDeployment === 'enterprise' ? '1px solid #e2e8f0' : 'none', borderRadius: '10px', padding: '10px 20px', fontSize: '13px', fontWeight: 700, color: activeDeployment === 'enterprise' ? '#3b82f6' : '#94a3b8', boxShadow: activeDeployment === 'enterprise' ? '0 2px 8px rgba(0,0,0,0.08)' : 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+                  <button type="button" onClick={() => setActiveDeployment('enterprise')} style={{ flex: 1, background: activeDeployment === 'enterprise' ? 'white' : 'transparent', border: activeDeployment === 'enterprise' ? '1px solid #e2e8f0' : 'none', borderRadius: '10px', padding: '10px 12px', fontSize: '13px', fontWeight: 700, color: activeDeployment === 'enterprise' ? '#3b82f6' : '#94a3b8', boxShadow: activeDeployment === 'enterprise' ? '0 2px 8px rgba(0,0,0,0.08)' : 'none', cursor: 'pointer' }}>
                     DocDash (Enterprise)
                   </button>
                 </div>
