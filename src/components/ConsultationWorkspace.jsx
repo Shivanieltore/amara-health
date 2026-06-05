@@ -156,7 +156,7 @@ export default function ConsultationWorkspace() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', paddingInline: '32px' }}>
 
           {/* ── Top meta bar ── */}
-          <div className="flex justify-between items-center" style={{ marginBottom: '14px' }}>
+          <div className="flex flex-wrap justify-between items-center gap-2" style={{ marginBottom: '14px' }}>
             <span className="font-semibold uppercase tracking-widest text-slate-400" style={{ fontSize: '11px' }}>
               Interactive Consultation Workspace
             </span>
@@ -170,40 +170,40 @@ export default function ConsultationWorkspace() {
           <div className="rounded-2xl bg-white border border-slate-200 shadow-2xl overflow-hidden" style={{ minHeight: '700px' }}>
 
             {/* Patient header bar */}
-            <div className="flex items-center justify-between border-b border-slate-200" style={{ padding: '20px 32px' }}>
-              <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200" style={{ padding: '16px 20px' }}>
+              <div className="flex items-center gap-3">
                 <div className="rounded-full bg-blue-600 text-white flex items-center justify-center font-bold shrink-0"
-                  style={{ width: '56px', height: '56px', fontSize: '18px' }}>
+                  style={{ width: '44px', height: '44px', fontSize: '16px' }}>
                   RC
                 </div>
                 <div>
-                  <div className="flex items-center flex-wrap" style={{ gap: '10px' }}>
-                    <span className="font-bold text-slate-900" style={{ fontSize: '20px' }}>Robert Chen</span>
-                    <span className="text-slate-500" style={{ fontSize: '14px' }}>Age 58</span>
-                    <span className="font-semibold text-blue-600 bg-blue-50 border border-blue-100 rounded-full" style={{ fontSize: '12px', padding: '2px 12px' }}>
+                  <div className="flex items-center flex-wrap" style={{ gap: '8px' }}>
+                    <span className="font-bold text-slate-900" style={{ fontSize: '16px' }}>Robert Chen</span>
+                    <span className="text-slate-500" style={{ fontSize: '13px' }}>Age 58</span>
+                    <span className="font-semibold text-blue-600 bg-blue-50 border border-blue-100 rounded-full" style={{ fontSize: '11px', padding: '2px 10px' }}>
                       New Patient Intake
                     </span>
                   </div>
-                  <p className="text-slate-500" style={{ fontSize: '13px', marginTop: '3px' }}>
+                  <p className="text-slate-500" style={{ fontSize: '12px', marginTop: '2px' }}>
                     Primary Concern: Stable exertional chest tightness, hypertension review
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 shrink-0">
-                <span className="text-slate-400" style={{ fontSize: '13px' }}>Amara Unified Engine:</span>
+              <div className="hidden sm:flex items-center gap-2 shrink-0">
+                <span className="text-slate-400" style={{ fontSize: '12px' }}>Amara Unified Engine:</span>
                 <div className="flex items-center gap-1.5 bg-white border border-slate-200 shadow-sm rounded-xl font-semibold text-blue-600"
-                  style={{ fontSize: '13px', padding: '6px 16px' }}>
-                  <Sparkles className="w-3.5 h-3.5 shrink-0" />
+                  style={{ fontSize: '12px', padding: '5px 12px' }}>
+                  <Sparkles className="w-3 h-3 shrink-0" />
                   Active Context Loaded
                 </div>
               </div>
             </div>
 
             {/* ── Two-column body ── */}
-            <div className="grid grid-cols-12" style={{ minHeight: '600px' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-12">
 
               {/* LEFT: stream list */}
-              <div className="col-span-5 border-r border-slate-200 flex flex-col" style={{ padding: '24px' }}>
+              <div className="lg:col-span-5 border-b lg:border-b-0 lg:border-r border-slate-200 flex flex-col" style={{ padding: '20px', maxHeight: '400px', overflowY: 'auto' }}>
 
                 {/* Sub-header */}
                 <div className="flex justify-between items-center shrink-0" style={{ marginBottom: '12px' }}>
@@ -292,7 +292,7 @@ export default function ConsultationWorkspace() {
               </div>
 
               {/* RIGHT: detail panel */}
-              <div className="col-span-7 flex flex-col" style={{ padding: '32px' }}>
+              <div className="lg:col-span-7 flex flex-col" style={{ padding: '24px' }}>
                 {selected && (
                   <>
                     {/* Source badge */}

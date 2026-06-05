@@ -95,7 +95,7 @@ export default function ProblemsSection() {
           >
 
             {/* Card header */}
-            <div className="flex items-start justify-between gap-4" style={{ marginBottom: '36px' }}>
+            <div className="flex flex-wrap items-start justify-between gap-3" style={{ marginBottom: '36px' }}>
               <div>
                 <span className="block font-bold uppercase tracking-widest text-blue-400" style={{ fontSize: '11px', marginBottom: '8px' }}>
                   With Amara
@@ -104,7 +104,7 @@ export default function ProblemsSection() {
                   Standardized Timeline Layer
                 </h3>
               </div>
-              <div className="flex items-center gap-1.5 rounded-full border border-blue-500/40 bg-blue-600/20 text-blue-300 font-semibold shrink-0"
+              <div className="flex items-center gap-1.5 rounded-full border border-blue-500/40 bg-blue-600/20 text-blue-300 font-semibold"
                 style={{ fontSize: '11px', padding: '6px 12px' }}>
                 <Sparkles className="w-3.5 h-3.5 shrink-0" />
                 Fully Synthesized

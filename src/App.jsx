@@ -39,11 +39,13 @@ export default function App() {
           </nav>
 
           <div className="flex items-center gap-4 shrink-0">
-            <a href="#demo-section" className="hidden sm:block text-sm font-bold text-slate-900 hover:text-blue-900 transition-colors">
+            <a href="#demo-section" className="hidden lg:block text-sm font-bold text-slate-900 hover:text-blue-900 transition-colors">
               Book Walkthrough
             </a>
-            <a href="#demo-section" className="inline-flex items-center gap-2 font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors" style={{ padding: '12px 24px', fontSize: '15px', borderRadius: '12px' }}>
-              Start a Practice Pilot <ArrowRight className="w-4 h-4" />
+            <a href="#demo-section" className="inline-flex items-center gap-2 font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors" style={{ padding: '10px 16px', fontSize: '13px', borderRadius: '12px' }}>
+              <span className="hidden sm:inline">Start a Practice Pilot</span>
+              <span className="sm:hidden">Get Started</span>
+              <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </LayoutContainer>

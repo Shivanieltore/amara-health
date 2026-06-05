@@ -31,7 +31,7 @@ export default function DemoBookingForm() {
       <div style={{ maxWidth: '1152px', margin: '0 auto', paddingInline: '32px' }}>
 
         {/* Two-column layout */}
-        <div style={{ display: 'grid', gridTemplateColumns: '0.75fr 1.25fr', gap: '80px', alignItems: 'flex-start' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-20 items-start">
 
           {/* LEFT COLUMN */}
           <div>
@@ -117,7 +117,7 @@ export default function DemoBookingForm() {
                   </p>
 
                   {/* Row 1: Name + Email */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" style={{ marginBottom: '16px' }}>
                     <div>
                       <label style={labelStyle}>Full Name</label>
                       <input
@@ -141,7 +141,7 @@ export default function DemoBookingForm() {
                   </div>
 
                   {/* Row 2: Dropdowns */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" style={{ marginBottom: '16px' }}>
                     <div>
                       <label style={labelStyle}>Entity / Practice Type</label>
                       <select
@@ -198,7 +198,7 @@ export default function DemoBookingForm() {
                   </button>
 
                   {/* Disclaimer */}
-                  <p style={{ fontSize: '11px', color: '#94a3b8', fontStyle: 'italic', textAlign: 'center', whiteSpace: 'nowrap' }}>
+                  <p style={{ fontSize: '11px', color: '#94a3b8', fontStyle: 'italic', textAlign: 'center' }}>
                     By clicking submit, you confirm safe storage of your practice data in compliance with standard BAA data clauses.
                   </p>
                 </form>
